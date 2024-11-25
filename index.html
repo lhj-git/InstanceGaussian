@@ -96,7 +96,7 @@
               <i class="fab fa-github"></i>
             </span>
             <span>Code</span> -->
-            </a>
+            <!-- </a> -->
             <!-- <a href="static/pdfs/supplementary_material.pdf" target="_blank" class="button is-dark is-rounded">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
               <span>Supplementary</span>
@@ -134,10 +134,16 @@
         3D scene understanding has become an essential area of research with applications in autonomous driving, robotics, and augmented reality. Recently, 3D Gaussian Splatting (3DGS) has emerged as a powerful approach, combining explicit modeling with neural adaptability to provide efficient and detailed scene representations. 
       </p>
       <p>
-        However, three major challenges remain in leveraging 3DGS for scene understanding: 1) an imbalance between appearance and semantics, where dense Gaussian usage for fine-grained texture modeling does not align with the minimal requirements for semantic attributes; 2) inconsistencies between appearance and semantics, as purely appearance-based Gaussians often misrepresent object boundaries; and 3) reliance on top-down instance segmentation methods, which struggle with uneven category distributions, leading to over- or under-segmentation.
+        However, three major challenges remain in leveraging 3DGS for scene understanding: 
+        <strong>1)</strong> an imbalance between appearance and semantics, where dense Gaussian usage for fine-grained texture modeling does not align with the minimal requirements for semantic attributes; 
+        <strong>2)</strong> inconsistencies between appearance and semantics, as purely appearance-based Gaussians often misrepresent object boundaries; and 
+        <strong>3)</strong> reliance on top-down instance segmentation methods, which struggle with uneven category distributions, leading to over- or under-segmentation.
       </p>
       <p>
-        In this work, we propose InstanceGaussian, a method that jointly learns appearance and semantic features while adaptively aggregating instances. Our contributions include i) a novel Semantic-Scaffold-GS representation balancing appearance and semantics to improve feature representations and boundary delineation; ii) a progressive appearance-semantic joint training strategy to enhance stability and segmentation accuracy; and iii) a bottom-up, category-agnostic instance aggregation approach that addresses segmentation challenges through farthest point sampling and connected component analysis. Our approach achieves state-of-the-art performance in category-agnostic, open-vocabulary 3D point-level segmentation, highlighting the effectiveness of the proposed representation and training strategies.
+        In this work, we propose <strong>InstanceGaussian</strong>, a method that jointly learns appearance and semantic features while adaptively aggregating instances. Our contributions include: 
+        <strong>i)</strong> a novel Semantic-Scaffold-GS representation balancing appearance and semantics to improve feature representations and boundary delineation; 
+        <strong>ii)</strong> a progressive appearance-semantic joint training strategy to enhance stability and segmentation accuracy; and 
+        <strong>iii)</strong> a bottom-up, category-agnostic instance aggregation approach that addresses segmentation challenges through farthest point sampling and connected component analysis. Our approach achieves state-of-the-art performance in category-agnostic, open-vocabulary 3D point-level segmentation, highlighting the effectiveness of the proposed representation and training strategies.
       </p>
     </div>
   </div>
@@ -153,6 +159,10 @@
     <figure>
       <img src="static/images/openv_00.png" alt="Open vocabulary results">
       <figcaption>Open-vocabulary query point cloud understanding on Scannet dataset.</figcaption>
+    </figure>
+    <figure>
+      <img src="static/images/lerf_00.png" alt="Open vocabulary results">
+      <figcaption>Open-vocabulary 3D object selection and rendering on the LERF dataset.</figcaption>
     </figure>
   </div>
 </section>
