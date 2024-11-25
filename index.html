@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>InstanceGaussian: Appearance-Semantic Joint Gaussian Representation for 3D Instance-Level Perception</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <style>
+    body {
+      font-family: "Noto Sans", sans-serif;
+    }
+    .title, .subtitle {
+      text-align: center;
+    }
+    figure img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    figure figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: gray;
+      margin-top: 10px;
+    }
+    .content p {
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-12 has-text-centered">
+          <h1 class="title is-2">InstanceGaussian: Appearance-Semantic Joint Gaussian Representation for 3D Instance-Level Perception</h1>
+          <div class="is-size-5">
+            <p>
+              Haijie Li</a>,
+              Yanmin Wu</a>,
+              Jiarui Meng</a>,
+              Qiankun Gao</a>,
+              Zhirao Zhang</a>,
+              Ronggang Wang</a>,
+              Jian Zhang</a>
+            </p>
+            <p></p>
+            <p>Peking University</p>
+          </div>
+          <div class="buttons is-centered">
+            <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank" class="button is-dark is-rounded">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Paper</span>
+            </a>
+            <!-- <a href="https://github.com/YOUR REPO HERE" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>Code</span> -->
+            </a>
+            <!-- <a href="static/pdfs/supplementary_material.pdf" target="_blank" class="button is-dark is-rounded">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Supplementary</span>
+            </a> -->
+            <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="button is-dark is-rounded">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3">Framework</h2>
+    <figure>
+      <img src="static/images/framework_00.png" alt="Framework image">
+      <figcaption>
+        Top: Appearance-semantic joint Gaussian representation avoids the imbalance and inconsistency in appearance-semantic learning.
+        <p></p>
+        Bottom: Bottom-up instantiation: Over-segmentation is achieved via FPS sampling and clustering, followed by instantiation through graph-connectivity-based aggregation.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content">
+      <p>
+        3D scene understanding has become an essential area of research with applications in autonomous driving, robotics, and augmented reality. Recently, 3D Gaussian Splatting (3DGS) has emerged as a powerful approach, combining explicit modeling with neural adaptability to provide efficient and detailed scene representations. 
+      </p>
+      <p>
+        However, three major challenges remain in leveraging 3DGS for scene understanding: 1) an imbalance between appearance and semantics, where dense Gaussian usage for fine-grained texture modeling does not align with the minimal requirements for semantic attributes; 2) inconsistencies between appearance and semantics, as purely appearance-based Gaussians often misrepresent object boundaries; and 3) reliance on top-down instance segmentation methods, which struggle with uneven category distributions, leading to over- or under-segmentation.
+      </p>
+      <p>
+        In this work, we propose InstanceGaussian, a method that jointly learns appearance and semantic features while adaptively aggregating instances. Our contributions include i) a novel Semantic-Scaffold-GS representation balancing appearance and semantics to improve feature representations and boundary delineation; ii) a progressive appearance-semantic joint training strategy to enhance stability and segmentation accuracy; and iii) a bottom-up, category-agnostic instance aggregation approach that addresses segmentation challenges through farthest point sampling and connected component analysis. Our approach achieves state-of-the-art performance in category-agnostic, open-vocabulary 3D point-level segmentation, highlighting the effectiveness of the proposed representation and training strategies.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-4">Results</h2>
+    <figure>
+      <img src="static/images/instance_00.png" alt="Instance segmentation result">
+      <figcaption>Visualization comparison of category-agnostic 3D instance segmentation result.</figcaption>
+    </figure>
+    <figure>
+      <img src="static/images/openv_00.png" alt="Open vocabulary results">
+      <figcaption>Open-vocabulary query point cloud understanding on Scannet dataset.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>BibTex Code Here</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>
+      This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
