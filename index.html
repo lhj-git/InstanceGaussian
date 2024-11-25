@@ -51,10 +51,13 @@
       text-align: center;
       font-size: 0.9rem;
       color: gray;
-      margin-top: 10px;
+      margin-top: 5px;
+      margin-bottom: 25px;
     }
     .content p {
+      width: 80%;
       line-height: 1.6;
+      margin: 0 auto;
     }
     footer {
       text-align: center;
@@ -66,57 +69,49 @@
 </head>
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-12 has-text-centered">
-          <h1 class="title is-2">InstanceGaussian: Appearance-Semantic Joint Gaussian Representation for 3D Instance-Level Perception</h1>
-          <div class="is-size-5">
-            <p>
-              Haijie Li</a>,
-              Yanmin Wu</a>,
-              Jiarui Meng</a>,
-              Qiankun Gao</a>,
-              Zhirao Zhang</a>,
-              Ronggang Wang</a>,
-              Jian Zhang</a>
-            </p>
-            <p></p>
-            <p>Peking University</p>
-          </div>
-          <div class="buttons is-centered">
-            <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank" class="button is-dark is-rounded">
-              <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>Paper</span>
-            </a>
-            <!-- <a href="https://github.com/YOUR REPO HERE" target="_blank"
-            class="external-link button is-normal is-rounded is-dark">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-            <span>Code</span> -->
-            <!-- </a> -->
-            <!-- <a href="static/pdfs/supplementary_material.pdf" target="_blank" class="button is-dark is-rounded">
-              <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>Supplementary</span>
-            </a> -->
-            <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="button is-dark is-rounded">
-              <span class="icon"><i class="ai ai-arxiv"></i></span>
-              <span>arXiv</span>
-            </a>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-12 has-text-centered">
+            <h1 class="title is-2">InstanceGaussian: Appearance-Semantic Joint Gaussian Representation for 3D Instance-Level Perception</h1>
+            <div class="is-size-5">
+              <p>
+                Haijie Li<sup>1</sup>,
+                Yanmin Wu<sup>1</sup>,
+                Jiarui Meng<sup>1</sup>,
+                Qiankun Gao<sup>1</sup>,
+                Zhiyao Zhang<sup>2</sup>,
+                Ronggang Wang<sup>1</sup>,
+                Jian Zhang<sup>1</sup>
+              </p>
+              <p></p>
+              <p>
+                <sup>1</sup>Peking University, <sup>2</sup>Northeastern University
+              </p>
+            </div>
+            <div class="buttons is-centered">
+              <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank" class="button is-dark is-rounded">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+              <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="button is-dark is-rounded">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
 
 <section class="section">
   <div class="container">
     <h2 class="title is-3">Framework</h2>
     <figure>
-      <img src="static/images/framework_00.png" alt="Framework image">
+      <img src="static/images/framework_00.png" alt="Framework image" style="width: 80%;display: block; margin: auto;">
       <figcaption>
         Top: Appearance-semantic joint Gaussian representation avoids the imbalance and inconsistency in appearance-semantic learning.
         <p></p>
@@ -153,16 +148,21 @@
   <div class="container">
     <h2 class="title is-4">Results</h2>
     <figure>
-      <img src="static/images/instance_00.png" alt="Instance segmentation result">
+      <img src="static/images/instance_00.png" alt="Instance segmentation result" style="width: 80%;display: block; margin: auto;">
       <figcaption>Visualization comparison of category-agnostic 3D instance segmentation result.</figcaption>
     </figure>
     <figure>
-      <img src="static/images/openv_00.png" alt="Open vocabulary results">
+      <img src="static/images/openv_00.png" alt="Open vocabulary results" style="width: 80%;display: block; margin: auto;">
       <figcaption>Open-vocabulary query point cloud understanding on Scannet dataset.</figcaption>
     </figure>
     <figure>
-      <img src="static/images/lerf_00.png" alt="Open vocabulary results">
-      <figcaption>Open-vocabulary 3D object selection and rendering on the LERF dataset.</figcaption>
+      <img src="static/images/lerf_00.png" alt="Open vocabulary results" style="width: 80%;display: block; margin: auto;">
+      <figcaption>Open-vocabulary 3D object selection and rendering on the LeRF dataset.</figcaption>
+    </figure>
+    <figure>
+    <img src="static/images/grasp_00.png" alt="Open vocabulary results" style="width: 80%;display: block; margin: auto;">
+      <figcaption><p>Top: Reference image of scenes. Middle: Constructed 3D Gaussians/points. </p>
+        <p>Bottom: The visualization result of category-agnostic 3D instance segmentation in GraspNet dataset.</p></figcaption>
     </figure>
   </div>
 </section>
