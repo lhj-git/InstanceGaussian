@@ -1,3 +1,3 @@
 git add .
-git commit -m "Change readme"
+git commit -m "adjust page"
 git push origin main
