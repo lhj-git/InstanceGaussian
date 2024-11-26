@@ -1,1 +1,1 @@
-# InatanceGaussian Page
+# InstanceGaussian Page
