@@ -65,6 +65,28 @@
       background-color: #f9f9f9;
       font-size: 0.8rem;
     }
+    .gif-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto;
+      width: 90%;
+    }
+    .gif-item {
+      flex: 1;
+      margin: 0 10px;
+      text-align: center;
+    }
+    .gif-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .gif-caption {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #666;
+    }
   </style>
 </head>
 <body>
@@ -154,6 +176,23 @@
 <section class="section">
   <div class="container">
     <h2 class="title is-4">Results</h2>
+    
+    <!-- GIF Section - 3 GIFs side by side -->
+    <div class="gif-container">
+      <div class="gif-item">
+        <img src="static/gifs/RGB.gif" alt="Demo 1">
+        <div class="gif-caption">RGB</div>
+      </div>
+      <div class="gif-item">
+        <img src="static/gifs/OpenGaussian.gif" alt="Demo 2">
+        <div class="gif-caption">OpenGaussian</div>
+      </div>
+      <div class="gif-item">
+        <img src="static/gifs/InstanceGaussian.gif" alt="Demo 3">
+        <div class="gif-caption">InstanceGaussian</div>
+      </div>
+    </div>
+    
     <figure>
       <img src="static/images/instancev2_00.png" alt="Instance segmentation result" style="width: 80%;display: block; margin: auto;">
       <figcaption>Visualization comparison of category-agnostic 3D instance segmentation result.</figcaption>
